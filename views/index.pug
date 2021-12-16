@@ -1,0 +1,14 @@
+extends layout
+
+block header
+    
+        
+    if autenticacion == false
+        a(href="/login" class="a" id="tel" style="margin-right:20px;") log in
+
+        a(href="/registro" class="a" id="mail" ) Registrar
+    else
+        a(href="/cerrarsesion") Cerrar sesion 
+
+            
+        

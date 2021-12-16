@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.h1 {}
+
+.mobiemail li {
+    margin-left: 10px;
+}
+
+.mobiemail a:active {
+    color: rgb(0, 97, 161);
+}
+
+.contenedor {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    border: black;
+    width: 40%;
+    height: 100%;
+    padding: 50px;
+    background-color: rgba(236, 236, 236, 0.7);
+    box-shadow: 0px 0px 3px 0.1px;
+}
+
+.contenido {
+    list-style: none;
+}
+
+.mobiemail a {
+    color: rgb(24, 24, 24);
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 5px;
+    display: flex;
+    float: left;
+}
+
+.form input {
+    margin-bottom: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error {
+    color: red!important;
+    background-color: rgb(255, 201, 201);
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.error p {
+    color: red!important;
+}

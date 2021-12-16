@@ -1,0 +1,52 @@
+extends layout
+block header
+    .contenedor
+        ul.contenido
+            li
+                h1(class="h1" style="position:relative;left:-20px; list-style:none; ") Register
+
+
+            
+            li.mobiemail  
+           
+
+            form.form(action="/registro" method="post")
+                label(for="name") Name:
+                input(type="text" maxlength="40" id="name" value= name  onkeypress="return soloLetras(event)" name="name" placeholder="Name:" required)
+                label(for="lastname") Last Name:
+                input(type="text" maxlength="40" id="lastname" value= lastname  onkeypress="return soloLetras(event)" name="lastname" placeholder="Last Name:" required)
+                label(for="mobile") Mobile Number:
+                input(type="cod" id="cod"  placeholder="+52:" value= cod onkeypress="return solonumeros(event)" name="cod" style="width:60px;" pattern="[0-9]+" maxlength="15" required)
+                input(type="number" maxlength="20" value= mobile id="mobile" name="mobile" onkeypress="return solonumeros(event)" placeholder="Mobile Number:" pattern="[0-9]+" required)
+           
+                label(for="country") Country:
+                input(type="text" maxlength="100" id="country" value= country name="country" placeholder="Country:" required)
+                
+                label(for="city") City:
+                input(type="text" maxlength="100" id="city" value= city name="city" placeholder="City:" required)
+
+               
+                label(for="suscribe") Subscribe to News:
+                input(type="checkbox" id="suscribe" name="suscribe" placeholder="Subscribe to News:")
+                label(for="email") Email:
+                input(type="text" id="email" name="email" value= email placeholder="Email:" required)
+                label(for="Contraseña") Password:
+                input(type="password" id="contrasena" class="pass" value= pass  name="pass" placeholder="Password:" required)
+                span(id="passstrength")
+                label(for="rContraseña") repeat your password:
+                input(type="password" id="rcontrasena" class="pass" name="rcontrasena" placeholder="repeat your password:" required)
+                span(id="passstrength2")
+                label(for="acept") accept the terms and conditions:
+                input(type="checkbox" id="acept" name="acept" placeholder="I accept the terms and conditions:" required)    
+                input(type="submit" value="Enviar"  id="enviar" name="enviar" class="boton")    
+                a(href="/login") Iniciar sesion
+            if errores3
+                each error3 in errores3
+                    p.error #{error3.texto3} 
+
+            if errores
+                each error in errores
+                    p(class="alert alert-danger")= error.message
+            
+  
+    script(src="/js/validator.js")
